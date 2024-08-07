@@ -54,7 +54,9 @@ Imagen del repositorio despues de hacer el ejrecicio:
   - Crear una nueva rama
   - Cambiarse a esa rama
   - Hacer un cambio en el archivo Readme.md y hacer commit
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageRamas2.png)
   - Revisar la diferencia entre ramas
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageRamas1.png)
 
 #### 7- Merges
   - Hacer un merge FF

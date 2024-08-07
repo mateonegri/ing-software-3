@@ -38,11 +38,17 @@ Imagen del repositorio despues de hacer el ejrecicio:
 #### 5- Creación de Repos 02-> Crearlo localmente y subirlo a GitHub
   - Crear un repo local
   - Agregar archivo Readme.md con algunas lineas de texto
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image3Ej2%20.png)
   - Crear repo remoto en GitHub
   - Asociar repo local con remoto
   - Crear archivo .gitignore
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image4Ej2%20.png)
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image5Ej2.png)
   - Crear un commit y proveer un mensaje descriptivo
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image6Ej2.png)
   - Subir cambios.
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image2Ej2%20.png)
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image1Ej2.png)
 
 #### 6- Ramas
   - Crear una nueva rama

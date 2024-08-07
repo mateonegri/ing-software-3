@@ -6,22 +6,34 @@ Por utilizarlo en materias anteriores, ya tenia git instalado en mi computadora.
 
 #### 2- Crear un repositorio local y agregar archivos
   - Crear un repositorio local en un nuevo directorio.
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagen13.png)
   - Agregar un archivo Readme.md, agregar algunas líneas con texto a dicho archivo.
+    
   - Crear un commit y proveer un mensaje descriptivo.
   
-
 #### 3- Configuración del Editor Predeterminado
  - Instalar Notepad ++ para Windows o TextMate para Mac OS, colocarle un alias y configurarlo como editor predeterminado
    
 #### 4- Creación de Repos 01 -> Crearlo en GitHub, clonarlo localmente y subir cambios
   - Crear una cuenta en https://github.com
   - Crear un nuevo repositorio en dicha página con el Readme.md por defecto
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagen13.png)
   - Clonar el repo remoto en un nuevo directorio local
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagen11.png)
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagen10.png)
   - Editar archivo Readme.md agregando algunas lineas de texto
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagen9.png)
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagen8.png)
   - Editar (o crear si no existe) el archivo .gitignore agregando los archivos *.bak
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagen7.png)
   - Crear un commit y porveer un mensaje descriptivo
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagen6.png)
   - Intentar un push al repo remoto
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagen4.png)
   - En caso de ser necesario configurar las claves SSH requeridas y reintentar el push.
+Imagen del repositorio despues de hacer el ejrecicio:
+
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagen3.png)
 
 #### 5- Creación de Repos 02-> Crearlo localmente y subirlo a GitHub
   - Crear un repo local

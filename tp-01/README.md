@@ -97,10 +97,25 @@ Al poner git mergetool en la terminal nos lleva a BeyondCompare, la siguiente ap
 #### 9- Familiarizarse con el concepto de Pull Request
 
   - Explicar que es un pull request.
-  - Crear un branch local y agregar cambios a dicho branch. 
+Un pull request (PR) en Git es una solicitud para fusionar cambios de una rama en un repositorio a otra, generalmente de una rama de desarrollo a la rama principal (main o master). Es una herramienta clave en el flujo de trabajo colaborativo en proyectos de software, especialmente cuando se trabaja en equipos.
+  - Crear un branch local y agregar cambios a dicho branch.
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagePullRequest7.png)
   - Subir el cambio a dicho branch y crear un pull request.
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagePullRequest6.png)
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagePullRequest5.png)
+
+Ahora realizamos la pull request.
+
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagePullRequest4.png)
+
   - Completar el proceso de revisión en github y mergear el PR al branch master.
 
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagePullRequest3.png)
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagePullRequest2.png)
+
+Una vez terminado el proceso de revision vemos esto:
+
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagePullRequest1.png)
 
 #### 10- Algunos ejercicios online
   - Entrar a la página https://learngitbranching.js.org/

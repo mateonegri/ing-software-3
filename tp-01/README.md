@@ -76,13 +76,23 @@ Primero nos vamos a la rama main, despues hacemos el merge con la rama newFeatur
     - https://www.scootersoftware.com/support.php?zz=kb_vcs
     - https://medium.com/@robinvanderknaap/using-p4merge-with-tortoisegit-87c1714eb5e2
   - Crear una nueva rama conflictBranch
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageConflict1.png)
   - Realizar una modificación en la linea 1 del Readme.md desde main y commitear
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageConflict3.png)
   - En la conflictBranch modificar la misma línea del Readme.md y commitear
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageConflict4.png)
   - Ver las diferencias con git difftool main conflictBranch
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageConflict5.png)
   - Cambiarse a la rama main e intentar mergear con la rama conflictBranch
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageConflict6.png)
   - Resolver el conflicto con git mergetool
+Al poner git mergetool en la terminal nos lleva a BeyondCompare, la siguiente aplicacion:
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageConflict7.png)
   - Agregar .orig al .gitignore
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageConflict9.png)
   - Hacer commit y push
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageConflict8.png)
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageConflict2.png)
 
 #### 9- Familiarizarse con el concepto de Pull Request
 

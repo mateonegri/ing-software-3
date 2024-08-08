@@ -6,10 +6,11 @@ Por utilizarlo en materias anteriores, ya tenia git instalado en mi computadora.
 
 #### 2- Crear un repositorio local y agregar archivos
   - Crear un repositorio local en un nuevo directorio.
-![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagen13.png)
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageEj1-3.png)
   - Agregar un archivo Readme.md, agregar algunas líneas con texto a dicho archivo.
-    
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageEj1-4.png)  
   - Crear un commit y proveer un mensaje descriptivo.
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageEj1-1.png)
   
 #### 3- Configuración del Editor Predeterminado
  - Instalar Notepad ++ para Windows o TextMate para Mac OS, colocarle un alias y configurarlo como editor predeterminado

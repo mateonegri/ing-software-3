@@ -61,6 +61,7 @@ Imagen del repositorio despues de hacer el ejrecicio:
   - Hacer un merge FF
   - Borrar la rama creada
   - Ver el log de commits
+Primero nos vamos a la rama main, despues hacemos el merge con la rama newFeature y pusheamos los cambios. Por ultimo, eliminamos la branch y vemos los logs.
 ![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageMergeFF.png)
   - Repetir el ejercicio 6 para poder hacer un merge con No-FF
 ![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageMergeNoFF.png)

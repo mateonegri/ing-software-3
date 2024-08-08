@@ -6,10 +6,11 @@ Por utilizarlo en materias anteriores, ya tenia git instalado en mi computadora.
 
 #### 2- Crear un repositorio local y agregar archivos
   - Crear un repositorio local en un nuevo directorio.
-![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imagen13.png)
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageEj1-3.png)
   - Agregar un archivo Readme.md, agregar algunas líneas con texto a dicho archivo.
-    
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageEj1-4.png)  
   - Crear un commit y proveer un mensaje descriptivo.
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageEj1-1.png)
   
 #### 3- Configuración del Editor Predeterminado
  - Instalar Notepad ++ para Windows o TextMate para Mac OS, colocarle un alias y configurarlo como editor predeterminado
@@ -39,14 +40,12 @@ Imagen del repositorio despues de hacer el ejrecicio:
   - Crear un repo local
   - Agregar archivo Readme.md con algunas lineas de texto
 ![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image3Ej2%20.png)
-  - Crear repo remoto en GitHub
-  - Asociar repo local con remoto
   - Crear archivo .gitignore
 ![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image4Ej2%20.png)
 ![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image5Ej2.png)
   - Crear un commit y proveer un mensaje descriptivo
 ![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image6Ej2.png)
-  - Subir cambios.
+  - Subir cambios y asociar repo local con remoto
 ![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image2Ej2%20.png)
 ![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image1Ej2.png)
 
@@ -62,6 +61,7 @@ Imagen del repositorio despues de hacer el ejrecicio:
   - Hacer un merge FF
   - Borrar la rama creada
   - Ver el log de commits
+Primero nos vamos a la rama main, despues hacemos el merge con la rama newFeature y pusheamos los cambios. Por ultimo, eliminamos la branch y vemos los logs.
 ![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageMergeFF.png)
   - Repetir el ejercicio 6 para poder hacer un merge con No-FF
 ![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageMergeNoFF.png)

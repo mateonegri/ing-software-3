@@ -62,7 +62,9 @@ Imagen del repositorio despues de hacer el ejrecicio:
   - Hacer un merge FF
   - Borrar la rama creada
   - Ver el log de commits
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageMergeFF.png)
   - Repetir el ejercicio 6 para poder hacer un merge con No-FF
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/imageMergeNoFF.png)
 
 #### 8- Resolución de Conflictos
   - Instalar alguna herramienta de comparación. Idealmente una 3-Way:

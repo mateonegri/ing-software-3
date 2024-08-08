@@ -120,7 +120,8 @@ Una vez terminado el proceso de revision vemos esto:
 #### 10- Algunos ejercicios online
   - Entrar a la página https://learngitbranching.js.org/
   - Completar los ejercicios **Introduction Sequence**
-  - Opcional - Completar el resto de los ejercicios para ser un experto en Git!!!
+
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/iamgeEjOnline.png)
 
 #### 11- Crear Repositorio de la materia
   - Crear un repositorio para la materia en github. Por ejemplo **ing-software-3**

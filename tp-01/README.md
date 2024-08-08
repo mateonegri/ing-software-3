@@ -40,14 +40,12 @@ Imagen del repositorio despues de hacer el ejrecicio:
   - Crear un repo local
   - Agregar archivo Readme.md con algunas lineas de texto
 ![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image3Ej2%20.png)
-  - Crear repo remoto en GitHub
-  - Asociar repo local con remoto
   - Crear archivo .gitignore
 ![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image4Ej2%20.png)
 ![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image5Ej2.png)
   - Crear un commit y proveer un mensaje descriptivo
 ![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image6Ej2.png)
-  - Subir cambios.
+  - Subir cambios y asociar repo local con remoto
 ![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image2Ej2%20.png)
 ![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-01/images/image1Ej2.png)
 

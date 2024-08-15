@@ -1,13 +1,6 @@
 ## Trabajo Práctico 2 - Introducción a Docker
 
-### 1- Objetivos de Aprendizaje
- - Familiarizarse con la tecnología de contendores 
- - Ejercitar comandos básicos de Docker.
-
-### 2- Unidad temática que incluye este trabajo práctico
-Este trabajo práctico corresponde a la unidad Nº: 2 (Libro Ingeniería de Software: Unidad 18)
-
-### 3- Consignas a desarrollar en el trabajo práctico:
+### Consignas a desarrollar en el trabajo práctico:
 
 A continuación, se presentarán algunos conceptos generales de la tecnología de contenedores a manera de introducción al tema desde el punto de vista práctico.
 
@@ -67,7 +60,7 @@ Las imágenes de docker están compuestas de varias capas (layers) de sistemas d
 
 (Imagen: https://washraf.gitbooks.io/the-docker-ecosystem/content/Chapter%201/Section%203/union_file_system.html)
 
-## 4- Desarrollo:
+## Desarrollo:
 
 #### 1- Instalar Docker Community Edition 
   - Diferentes opciones para cada sistema operativo
@@ -76,6 +69,8 @@ Las imágenes de docker están compuestas de varias capas (layers) de sistemas d
 ```bash
 docker version
 ```
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image0.png]
 
 #### 2- Explorar DockerHub
    - Registrase en docker hub: https://hub.docker.com/
@@ -86,10 +81,15 @@ docker version
   ```bash
   docker pull busybox
   ```
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image1.png]
+
   - Verificar qué versión y tamaño tiene la imagen bajada, obtener una lista de imágenes locales:
 ```bash
 docker images
 ```
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image2.png]
 
 #### 4- Ejecutando contenedores
   - Ejecutar un contenedor utilizando el comando **run** de docker:
@@ -97,12 +97,17 @@ docker images
 docker run busybox
 ```
 
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image3.png]
+
   - Explicar porque no se obtuvo ningún resultado
+
+  No se obtuvo ningun resultado porque Docker crea un contenedor desde la imagen busybox, ejecuta el comando predeterminado (que suele ser /bin/sh o similar), y luego sale inmediatamente si no hay tareas adicionales que realizar. Esto ocurre porque busybox es una imagen mínima que generalmente se usa para ejecutar comandos específicos en un entorno ligero, por lo que una vez que el comando se completa, el contenedor termina y muestra el estado exited.
 
   - Especificamos algún comando a correr dentro del contenedor, ejecutar por ejemplo:
 ```bash
 docker run busybox echo "Hola Mundo"
 ```
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image4.png]
 
   - Ver los contenedores ejecutados utilizando el comando **ps**:
 ```bash
@@ -112,7 +117,12 @@ docker ps
 ```bash
 docker ps -a
 ```
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image5.png]
+
   - Mostrar el resultado y explicar que se obtuvo como salida del comando anterior.
+
+El comando docker ps -a muestra una lista de todos los contenedores de Docker del sistema, incluidos los que están en ejecución, los que han sido detenidos y los que han fallado. Este comando es útil para ver el estado de todos los contenedores, no solo de los que están actualmente en ejecución.
 
 #### 5- Ejecutando en modo interactivo
 
@@ -127,6 +137,9 @@ uptime
 free
 ls -l /
 ```
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image6.png]
+
   - Salimos del contenedor con:
 ```bash
 exit
@@ -142,6 +155,9 @@ docker ps -a
 ```bash
 docker rm elated_lalande
 ```
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image7.png]
+
   - Para borrar todos los contenedores que no estén corriendo, ejecutar cualquiera de los siguientes comandos:
 ```bash
 docker rm $(docker ps -a -q -f status=exited)
@@ -150,26 +166,133 @@ docker rm $(docker ps -a -q -f status=exited)
 docker container prune
 ```
 
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image8.png]
+
 #### 7- Construir una imagen
 - Conceptos de DockerFile
   - Leer https://docs.docker.com/engine/reference/builder/ 
   - Describir las instrucciones
-     - FROM
-     - RUN
-     - ADD
-     - COPY
-     - EXPOSE
-     - CMD
-     - ENTRYPOINT
+     - FROM: Especifica la imagen base a partir de la cual se construirá la nueva imagen. Es la primera instrucción en un Dockerfile.
+     - RUN: Ejecuta un comando en la imagen durante el proceso de construcción. Los resultados de este comando se guardan en la imagen creada.
+     - ADD: Copia archivos o directorios desde el sistema de archivos del host a la imagen, y puede extraer archivos comprimidos automáticamente.
+     - COPY: Copia archivos o directorios desde el sistema de archivos del host a la imagen, sin procesamiento adicional como la extracción automática de archivos comprimidos (a diferencia de ADD).
+     - EXPOSE: Informa a Docker que el contenedor escucha en un puerto específico durante su ejecución. No publica el puerto en el host por sí mismo; eso se hace con la opción -p al ejecutar el contenedor.
+     - CMD: Especifica el comando predeterminado que se ejecutará cuando se inicie un contenedor a partir de la imagen. Solo puede haber una instrucción CMD por Dockerfile; si se especifican varias, solo la última será utilizada.
+     - ENTRYPOINT: Define el programa que se ejecutará como el comando principal dentro del contenedor. Similar a CMD, pero no se puede sobrescribir fácilmente desde la línea de comandos a menos que se use la opción --entrypoint.
+       
 - A partir del código https://github.com/ingsoft3ucc/SimpleWebAPI crearemos una imagen.
 - Clonar repo
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image9.png]
+
 - Crear imagen etiquetándola con un nombre. El punto final le indica a Docker que use el dir actual
 ```
 docker build -t mywebapi .
 ```
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image10.png]
+
 - Revisar Dockerfile y explicar cada línea
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image11.png]
+
+```dockerfile
+# FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+```
+- Usa la imagen base de ASP.NET Core 7.0, necesaria para ejecutar aplicaciones .NET.
+
+```dockerfile
+WORKDIR /app
+```
+- Establece el directorio de trabajo en `/app` dentro del contenedor.
+
+```dockerfile
+EXPOSE 80
+EXPOSE 443
+EXPOSE 5254
+```
+- Indica que la aplicación escuchará en los puertos 80, 443, y 5254.
+
+```dockerfile
+RUN mkdir -p /var/temp
+```
+- Crea un directorio temporal en `/var/temp`.
+
+```dockerfile
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+```
+- Usa la imagen SDK de .NET Core 7.0 para compilar la aplicación.
+
+```dockerfile
+WORKDIR /src
+```
+- Establece el directorio de trabajo en `/src` para la fase de construcción.
+
+```dockerfile
+COPY ["SimpleWebAPI/SimpleWebAPI.csproj", "SimpleWebAPI/"]
+```
+- Copia el archivo de proyecto de la aplicación a `/src/SimpleWebAPI/`.
+
+```dockerfile
+RUN dotnet restore "SimpleWebAPI/SimpleWebAPI.csproj"
+```
+- Restaura las dependencias necesarias para compilar la aplicación.
+
+```dockerfile
+COPY . .
+```
+- Copia todo el código fuente al contenedor.
+
+```dockerfile
+WORKDIR "/src/SimpleWebAPI"
+```
+- Cambia el directorio de trabajo a donde está la aplicación principal.
+
+```dockerfile
+RUN dotnet build "SimpleWebAPI.csproj" -c Release -o /app/build
+```
+- Compila la aplicación en modo Release y coloca los binarios en `/app/build`.
+
+```dockerfile
+FROM build AS publish
+```
+- Crea una etapa intermedia llamada `publish` para preparar la publicación.
+
+```dockerfile
+RUN dotnet publish "SimpleWebAPI.csproj" -c Release -o /app/publish /p:UseAppHost=false
+```
+- Publica la aplicación, preparando los archivos listos para ejecución en `/app/publish`.
+
+```dockerfile
+FROM base AS final
+```
+
+- Inicia la etapa final utilizando la imagen base inicial.
+
+```dockerfile
+WORKDIR /app
+```
+- Establece el directorio de trabajo en `/app` para la etapa final.
+
+```dockerfile
+COPY --from=publish /app/publish .
+```
+- Copia los archivos publicados desde la etapa `publish` al directorio `/app` en la imagen final.
+
+```dockerfile
+# ENTRYPOINT ["dotnet", "SimpleWebAPI.dll"]
+CMD ["/bin/bash"]
+```
+- Comentado: `ENTRYPOINT` configuraba la ejecución de la aplicación. 
+- `CMD` está configurado para abrir una terminal Bash cuando el contenedor se ejecuta.
+
 - Ver imágenes disponibles
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image12.png]
+
 - Ejecutar un contenedor con nuestra imagen
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image13.png]
+
 - Subir imagen a nuestra cuenta de dockerhub
   - 7.1 Inicia sesión en Docker Hub
     - Primero, asegúrate de estar autenticado en Docker Hub desde tu terminal:
@@ -185,10 +308,16 @@ docker build -t mywebapi .
      ```bash
      docker push <tu_usuario_dockerhub>/<nombre_imagen>:<tag>
      ```
+     
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image14.png]
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image15.png]
+
   - 7.4 Verificar la Subida
      ```bash
      docker pull <tu_usuario_dockerhub>/<nombre_imagen>:<tag>
      ```
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image16.png]
 
 #### 8- Publicando puertos
 
@@ -199,48 +328,74 @@ En el caso de aplicaciones web o base de datos donde se interactúa con estas ap
 ```bash
 docker run --name myapi -d mywebapi
 ```
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image17.png]
+
+
   - Ejecutamos un comando ps:
   - Vemos que el contendor expone 3 puertos el 80, el 5254 y el 443, pero si intentamos en un navegador acceder a http://localhost/WeatherForecast no sucede nada.
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image24.png]
 
   - Procedemos entonces a parar y remover este contenedor:
 ```bash
 docker kill myapi
 docker rm myapi
 ```
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image18.png]
+
   - Vamos a volver a correrlo otra vez, pero publicando el puerto 80
 
 ```bash
 docker run --name myapi -d -p 80:80 mywebapi
 ```
+
   - Accedamos nuevamente a http://localhost/WeatherForecast y vemos que nos devuelve datos.
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image19.png]
 
 #### 9- Modificar Dockerfile para soportar bash 
 
 - Modificamos dockerfile para que entre en bash sin ejecutar automaticamente la app
-
  
 ```bash
 #ENTRYPOINT ["dotnet", "SimpleWebAPI.dll"]
 CMD ["/bin/bash"]
 ```
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image21.png]
+
 - Rehacemos la imagen
 ```
 docker build -t mywebapi .
 ```
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image22.png]
+
 - Corremos contenedor en modo interactivo exponiendo puerto
 ```
 docker run -it --rm -p 80:80 mywebapi
 ```
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image23.png]
+
 - Navegamos a http://localhost/weatherforecast
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image24.png]
+  
 - Vemos que no se ejecuta automaticamente
 - Ejecutamos app:
 ```
 dotnet SimpleWebAPI.dll
 ```
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image25.png]
+
 -Volvemos a navegar a http://localhost/weatherforecast
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image26.png]
+
 - Salimos del contenedor
-
-
   
 #### 10- Montando volúmenes
 
@@ -255,7 +410,12 @@ docker run -it --rm -p 80:80 -v /Users/miuser/temp:/var/temp  mywebapi
 ls -l /var/temp
 touch /var/temp/hola.txt
 ```
+
   - Verificar que el Archivo se ha creado en el directorio del guest y del host.
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image28.png]
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image27.png]
 
 #### 11- Utilizando una base de datos
 - Levantar una base de datos PostgreSQL
@@ -265,6 +425,9 @@ mkdir $HOME/.postgres
 
 docker run --name my-postgres -e POSTGRES_PASSWORD=mysecretpassword -v $HOME/.postgres:/var/lib/postgresql/data -p 5432:5432 -d postgres:9.4
 ```
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image29.png]
+
 - Ejecutar sentencias utilizando esta instancia
 
 ```bash
@@ -286,14 +449,45 @@ select * from tabla_a;
 exit
 ```
 
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image30.png]
+
 - Conectarse a la base utilizando alguna IDE (Dbeaver - https://dbeaver.io/, Azure DataStudio -https://azure.microsoft.com/es-es/products/data-studio, etc). Interactuar con los objectos objectos creados.
 
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image31.png]
+
 - Explicar que se logro con el comando `docker run` y `docker exec` ejecutados en este ejercicio.
+
+ 1. docker run
+Crea y ejecuta un contenedor: Inicia un contenedor PostgreSQL con el nombre my-postgres.
+Persistencia de datos: Monta un volumen en el host para almacenar los datos de forma persistente.
+Mapeo de puertos: Permite el acceso a PostgreSQL en el puerto 5432 desde el host.
+ 2. docker exec
+Acceso al contenedor: Abre una terminal Bash dentro del contenedor my-postgres.
+ 3. Comandos en psql
+Conexión y manipulación: Se conecta a PostgreSQL, crea una base de datos y una tabla, inserta un registro y verifica los datos.
+Resultado: Se crea una base de datos PostgreSQL en un contenedor, con datos persistentes y se realiza una operación básica de inserción y consulta.
 
 #### 12- Hacer el punto 11 con Microsoft SQL Server
 - Armar un contenedor con SQL Server
 - Crear BD, Tablas y ejecutar SELECT
-  
-#### 13- Presentación del trabajo práctico.
 
-Subir un archivo md (puede ser en una carpeta) trabajo-practico-02 con las salidas de los comandos utilizados. Si es necesario incluir también capturas de pantalla.
+Primero, hacemos pull de la imagen de SQL Server.
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image33.png]
+
+Luego, corremos un contenedor con esa imagen. Y controlamos que SQL Server este listo para conectarse.
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image34.png]
+
+Vemos que el contenedor corre.
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image35.png]
+
+Luego, utilizando DBeaver, creamos una base de datos 'ej12', la selecciona y creamos la tabla 'tabla1'. Una vez hecho esto, insertamos un elemento en la tabla, el mensaje 'PRUEBA EJ12'.
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image36.png]
+
+Si hacemos un select a esa tabla, vemos que se creo correctamente.
+
+![][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image37.png]
+  

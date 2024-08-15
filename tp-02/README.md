@@ -70,7 +70,7 @@ Las imágenes de docker están compuestas de varias capas (layers) de sistemas d
 docker version
 ```
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image0.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image0.png)
 
 #### 2- Explorar DockerHub
    - Registrase en docker hub: https://hub.docker.com/
@@ -82,14 +82,14 @@ docker version
   docker pull busybox
   ```
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image1.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image1.png)
 
   - Verificar qué versión y tamaño tiene la imagen bajada, obtener una lista de imágenes locales:
 ```bash
 docker images
 ```
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image2.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image2.png)
 
 #### 4- Ejecutando contenedores
   - Ejecutar un contenedor utilizando el comando **run** de docker:
@@ -97,7 +97,7 @@ docker images
 docker run busybox
 ```
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image3.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image3.png)
 
   - Explicar porque no se obtuvo ningún resultado
 
@@ -107,7 +107,7 @@ docker run busybox
 ```bash
 docker run busybox echo "Hola Mundo"
 ```
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image4.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image4.png)
 
   - Ver los contenedores ejecutados utilizando el comando **ps**:
 ```bash
@@ -118,7 +118,7 @@ docker ps
 docker ps -a
 ```
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image5.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image5.png)
 
   - Mostrar el resultado y explicar que se obtuvo como salida del comando anterior.
 
@@ -138,7 +138,7 @@ free
 ls -l /
 ```
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image6.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image6.png)
 
   - Salimos del contenedor con:
 ```bash
@@ -156,7 +156,7 @@ docker ps -a
 docker rm elated_lalande
 ```
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image7.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image7.png)
 
   - Para borrar todos los contenedores que no estén corriendo, ejecutar cualquiera de los siguientes comandos:
 ```bash
@@ -166,7 +166,7 @@ docker rm $(docker ps -a -q -f status=exited)
 docker container prune
 ```
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image8.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image8.png)
 
 #### 7- Construir una imagen
 - Conceptos de DockerFile
@@ -183,17 +183,17 @@ docker container prune
 - A partir del código https://github.com/ingsoft3ucc/SimpleWebAPI crearemos una imagen.
 - Clonar repo
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image9.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image9.png)
 
 - Crear imagen etiquetándola con un nombre. El punto final le indica a Docker que use el dir actual
 ```
 docker build -t mywebapi .
 ```
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image10.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image10.png)
 
 - Revisar Dockerfile y explicar cada línea
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image11.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image11.png)
 
 ```dockerfile
 # FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
@@ -287,11 +287,11 @@ CMD ["/bin/bash"]
 
 - Ver imágenes disponibles
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image12.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image12.png)
 
 - Ejecutar un contenedor con nuestra imagen
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image13.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image13.png)
 
 - Subir imagen a nuestra cuenta de dockerhub
   - 7.1 Inicia sesión en Docker Hub
@@ -309,15 +309,15 @@ CMD ["/bin/bash"]
      docker push <tu_usuario_dockerhub>/<nombre_imagen>:<tag>
      ```
      
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image14.png]
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image15.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image14.png)
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image15.png)
 
   - 7.4 Verificar la Subida
      ```bash
      docker pull <tu_usuario_dockerhub>/<nombre_imagen>:<tag>
      ```
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image16.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image16.png)
 
 #### 8- Publicando puertos
 
@@ -329,13 +329,13 @@ En el caso de aplicaciones web o base de datos donde se interactúa con estas ap
 docker run --name myapi -d mywebapi
 ```
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image17.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image17.png)
 
 
   - Ejecutamos un comando ps:
   - Vemos que el contendor expone 3 puertos el 80, el 5254 y el 443, pero si intentamos en un navegador acceder a http://localhost/WeatherForecast no sucede nada.
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image24.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image24.png)
 
   - Procedemos entonces a parar y remover este contenedor:
 ```bash
@@ -352,7 +352,7 @@ docker run --name myapi -d -p 80:80 mywebapi
 
   - Accedamos nuevamente a http://localhost/WeatherForecast y vemos que nos devuelve datos.
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image19.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image19.png)
 
 #### 9- Modificar Dockerfile para soportar bash 
 
@@ -363,21 +363,21 @@ docker run --name myapi -d -p 80:80 mywebapi
 CMD ["/bin/bash"]
 ```
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image21.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image21.png)
 
 - Rehacemos la imagen
 ```
 docker build -t mywebapi .
 ```
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image22.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image22.png)
 
 - Corremos contenedor en modo interactivo exponiendo puerto
 ```
 docker run -it --rm -p 80:80 mywebapi
 ```
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image23.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image23.png)
 
 - Navegamos a http://localhost/weatherforecast
 
@@ -389,11 +389,11 @@ docker run -it --rm -p 80:80 mywebapi
 dotnet SimpleWebAPI.dll
 ```
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image25.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image25.png)
 
 -Volvemos a navegar a http://localhost/weatherforecast
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image26.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image26.png)
 
 - Salimos del contenedor
   
@@ -413,9 +413,9 @@ touch /var/temp/hola.txt
 
   - Verificar que el Archivo se ha creado en el directorio del guest y del host.
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image28.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image28.png)
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image27.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image27.png)
 
 #### 11- Utilizando una base de datos
 - Levantar una base de datos PostgreSQL
@@ -426,7 +426,7 @@ mkdir $HOME/.postgres
 docker run --name my-postgres -e POSTGRES_PASSWORD=mysecretpassword -v $HOME/.postgres:/var/lib/postgresql/data -p 5432:5432 -d postgres:9.4
 ```
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image29.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image29.png)
 
 - Ejecutar sentencias utilizando esta instancia
 
@@ -449,11 +449,11 @@ select * from tabla_a;
 exit
 ```
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image30.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image30.png)
 
 - Conectarse a la base utilizando alguna IDE (Dbeaver - https://dbeaver.io/, Azure DataStudio -https://azure.microsoft.com/es-es/products/data-studio, etc). Interactuar con los objectos objectos creados.
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image31.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image31.png)
 
 - Explicar que se logro con el comando `docker run` y `docker exec` ejecutados en este ejercicio.
 
@@ -473,21 +473,21 @@ Resultado: Se crea una base de datos PostgreSQL en un contenedor, con datos pers
 
 Primero, hacemos pull de la imagen de SQL Server.
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image33.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image33.png)
 
 Luego, corremos un contenedor con esa imagen. Y controlamos que SQL Server este listo para conectarse.
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image34.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image34.png)
 
 Vemos que el contenedor corre.
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image35.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image35.png)
 
 Luego, utilizando DBeaver, creamos una base de datos 'ej12', la selecciona y creamos la tabla 'tabla1'. Una vez hecho esto, insertamos un elemento en la tabla, el mensaje 'PRUEBA EJ12'.
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image36.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image36.png)
 
 Si hacemos un select a esa tabla, vemos que se creo correctamente.
 
-![alt text][https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image37.png]
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-02/images/image37.png)
   

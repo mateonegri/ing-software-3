@@ -142,9 +142,21 @@ Vamos a la seccion de Work Items y seleccionamos 'New work item'.
 
  - 3.10 Crear Tasks y Bugs
 
-Vamos nuevamente a la seccion de Work Items. 
+Vamos nuevamente a la seccion de Work Items y seleccionamos crear task. Vemos la siguiente pantalla.
 
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-03/images/image41.png)
 
+Si checkeamos el board vemos que se creo.
+
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-03/images/image31.png)
+
+Y por ultimo para crear un bug seguimos los mismos pasos pero seleccionamos bug.
+
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-03/images/image39.png)
+
+Y checkeamos que se creo todo correctamente.
+
+![alt text](https://github.com/mateonegri/ing-software-3/blob/main/tp-03/images/image40.png)
 
 #### 4- Presentación del trabajo práctico.
 Subir un al repo con las capturas de pantalla de los pasos realizados y colocar en el excel de repos (https://docs.google.com/spreadsheets/d/1mZKJ8FH390QHjwkABokh3Ys6kMOFZGzZJ3-kg5ziELc/edit?gid=0#gid=0) la url del proyecto de AzureDevops (

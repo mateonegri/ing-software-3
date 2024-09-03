@@ -253,13 +253,87 @@ Y podemos ver que esta el artefacti publicado. Y si lo corremos vemos que funcio
 
 2.12 Crear un nuevo proyecto en ADO clonado desde un repo que contenga una aplicación en Angular como por ejemplo https://github.com/ingsoft3ucc/angular-demo-project.git
 
+Vamos a new project.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA7.png)
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA3.png)
+
+Link del proyecto: https://dev.azure.com/mateonegri/tp-04
+
+Vamos a la seccion de repos y seleccionamos import.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA2.png)
+
+Y importamos el repo.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA1.png)
+
 2.13 Configurar un pipeline de build para un proyecto de tipo Angular como el clonado.
+
+Vamos a la seccion de pipeline y ponemos new pipeline. Seleccionamos Azure Repos Git, y despues seleccionamos el repo recien importado.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA0.png)
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA8.png)
+
+Seteamos el YAML de la siguiente manera.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA4.png)
+
+Se define primero la instalacion de node. Despues, se realizan las instalaciones de todas las dependencias utiliazando comandos npm. Y despues, seteamos el task para publicar los artefactos.
+
+Vemos que el pipeline funciona.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA5.png)
+
+Y que publica un artefacto llamado test. Este artefacto se ejectura en el paso 2.17.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA6.png)
 
 2.14 Habilitar CI para el pipeline.
 
+Para habilitar CI, editamos en el YAML y editamos los settings. Para esto entramos al pipeline y vamos a edit pipeline.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA10.png)
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA12.png)
+
 2.15 Hacer un cambio a un archivo del proyecto (algún cambio en el HTML que se renderiza por ejemplo) y verificar que se ejecute automáticamente el pipeline.
+
+Primero vemos que no hay un ningun pipeline corriendo.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA13.png)
+
+Luego, vamos a la seccion de repos y entramos al archivo car.components.html. Dentro del archivo, agregamos bg-red-400 al estilo del titulo y nombre del auto.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA14.png)
+
+Una vez terminado, commiteamos los cambios.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA21.png)
+
+Ahora si volvemos a la seccion de pipelines vemos que hay un pipeline corriendo con el mensaje del commit recien hecho.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA17.png)
+
+Una vez terminado, entramos al pipeline y descargamos los artefactos publicados.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA16.png)
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA18.png)
 
 2.16 Descargar el resultado del pipeline y correr en un servidor web local el sitio construido.
 
+Ya descargados ambos artefactos, el del primer pipeline y el del pipeline con CI. Los corremos utilizando el comando 'serve -s' y vemos los cambios.
+
 2.17 Mostrar el antes y el después del cambio.
+
+En la siguiente imagen se ve la pagina web original, es decir, el artefacto del primer pipeline.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA20.png)
+
+En esta imagen, vemos la pagina web modificada despues del commit de la actividad 2.15, es decir, el artefacto publicado en el segundo pipeline. Podemos ver claramente que el el cambio de estilo en la pagina en el nombre del auto.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/imageA19.png)
 

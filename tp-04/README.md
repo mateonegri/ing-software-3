@@ -165,6 +165,22 @@ En YAML:
 
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/image24.png)
 
+Vemos que no hay ningun pipeline ejecutandose.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/image32.png)
+
+Ahora hacemos un cambio en el README del repo.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/image33.png)
+
+Guardamos los cambios y hacemos un commit.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/image34.png)
+
+Y vemos que se estan corriendo ambos pipelines de manera automatica. Podemos identificar que es por el commit que hicimos recien por el nombre y el numero de commit.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-04/images/image35.png)
+
 2.8 Explicar la diferencia entre un agente MS y un agente Self-Hosted. Qué ventajas y desventajas hay entre ambos? Cuándo es conveniente y/o necesario usar un Self-Hosted Agent?
 
 #### Diferencia entre un Agente MS y un Agente Self-Hosted:

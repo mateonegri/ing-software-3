@@ -1,11 +1,13 @@
-1- Consignas a desarrollar en el trabajo práctico:
+## Trabajo Práctico 4 - Azure Devops Pipelines
+
+### 1 - Consignas a desarrollar en el trabajo práctico:
 Azure DevOps Pipelines
 
-Breve descripción de Azure DevOps Pipelines:
+#### Breve descripción de Azure DevOps Pipelines:
 
 Azure DevOps Pipelines es un servicio de CI/CD (Integración Continua y Entrega Continua) ofrecido por Microsoft dentro de la plataforma Azure DevOps. Este servicio permite a los equipos de desarrollo automatizar el proceso de compilación, pruebas y despliegue de aplicaciones, facilitando la entrega de software de alta calidad de manera más rápida y eficiente.
 
-Tipos de Pipelines: Build y Deploy:
+#### Tipos de Pipelines: Build y Deploy:
 
 Build Pipelines (Pipelines de Construcción):
 
@@ -27,7 +29,7 @@ Las etapas típicas en un pipeline de despliegue incluyen:
  - Validación post-despliegue (por ejemplo, pruebas de integración o de aceptación).
  - Implementación progresiva o canary releases (opcional).
 
-Diferencias entre editor clásico y YAML:
+#### Diferencias entre editor clásico y YAML:
 
 Editor Clásico:
 
@@ -43,7 +45,7 @@ Pipelines basados en YAML:
  - Requieren conocimientos básicos de YAML y programación, pero proporcionan una mayor consistencia y transparencia en los procesos de CI/CD.
  - Son la opción recomendada para proyectos con pipelines complejos o para equipos que siguen prácticas de DevOps maduras.
 
-Agentes MS y Self-Hosted:
+#### Agentes MS y Self-Hosted:
 
 Agentes MS (Microsoft-Hosted Agents):
 
@@ -58,22 +60,40 @@ Son agentes que los usuarios configuran y mantienen por su cuenta en su infraest
  - Son ideales para escenarios en los que se requieren configuraciones especializadas, acceso a recursos locales o software que no está disponible en los agentes Microsoft-hosted.
  - La administración de estos agentes recae completamente en el usuario, incluyendo actualizaciones, seguridad y mantenimiento.
 
-2- Pasos del TP
-1.1 Verificar acceso a Pipelines concedido
-1.2 Agregar en pipeline YAML una tarea de Publish.
-1.3 Explicar por qué es necesario contar con una tarea de Publish en un pipeline que corre en un agente de Microsoft en la nube.
-1.4 Descargar el resultado del pipeline y correr localmente el software compilado.
-1.5 Habilitar el editor clásico de pipelines. Explicar las diferencias claves entre este tipo de editor y el editor YAML.
-1.6 Crear un nuevo pipeline con el editor clásico. Descargar el resultado del pipeline y correr localmente el software compilado.
-1.7 Configurar CI en ambos pipelines (YAML y Classic Editor). Mostrar resultados de la ejecución automática de ambos pipelines al hacer un commit en la rama main.
-1.8 Explicar la diferencia entre un agente MS y un agente Self-Hosted. Qué ventajas y desventajas hay entre ambos? Cuándo es conveniente y/o necesario usar un Self-Hosted Agent?
-1.8 Crear un Pool de Agentes y un Agente Self-Hosted
-1.9 Instalar y correr un agente en nuestra máquina local.
-1.10 Crear un pipeline que use el agente Self-Hosted alojado en nuestra máquina local.
-1.11 Buscar el resultado del pipeline y correr localmente el software compilado.
-1.12 Crear un nuevo proyecto en ADO clonado desde un repo que contenga una aplicación en Angular como por ejemplo https://github.com/ingsoft3ucc/angular-demo-project.git
-1.13 Configurar un pipeline de build para un proyecto de tipo Angular como el clonado.
-1.14 Habilitar CI para el pipeline.
-1.15 Hacer un cambio a un archivo del proyecto (algún cambio en el HTML que se renderiza por ejemplo) y verificar que se ejecute automáticamente el pipeline.
-1.16 Descargar el resultado del pipeline y correr en un servidor web local el sitio construido.
-1.17 Mostrar el antes y el después del cambio.
+### 2 - Pasos del TP
+2.1 Verificar acceso a Pipelines concedido
+
+2.2 Agregar en pipeline YAML una tarea de Publish.
+
+2.3 Explicar por qué es necesario contar con una tarea de Publish en un pipeline que corre en un agente de Microsoft en la nube.
+
+2.4 Descargar el resultado del pipeline y correr localmente el software compilado.
+
+2.5 Habilitar el editor clásico de pipelines. Explicar las diferencias claves entre este tipo de editor y el editor YAML.
+
+2.6 Crear un nuevo pipeline con el editor clásico. Descargar el resultado del pipeline y correr localmente el software compilado.
+
+2.7 Configurar CI en ambos pipelines (YAML y Classic Editor). Mostrar resultados de la ejecución automática de ambos pipelines al hacer un commit en la rama main.
+
+2.8 Explicar la diferencia entre un agente MS y un agente Self-Hosted. Qué ventajas y desventajas hay entre ambos? Cuándo es conveniente y/o necesario usar un Self-Hosted Agent?
+
+2.8 Crear un Pool de Agentes y un Agente Self-Hosted
+
+2.9 Instalar y correr un agente en nuestra máquina local.
+
+2.10 Crear un pipeline que use el agente Self-Hosted alojado en nuestra máquina local.
+
+2.11 Buscar el resultado del pipeline y correr localmente el software compilado.
+
+2.12 Crear un nuevo proyecto en ADO clonado desde un repo que contenga una aplicación en Angular como por ejemplo https://github.com/ingsoft3ucc/angular-demo-project.git
+
+2.13 Configurar un pipeline de build para un proyecto de tipo Angular como el clonado.
+
+2.14 Habilitar CI para el pipeline.
+
+2.15 Hacer un cambio a un archivo del proyecto (algún cambio en el HTML que se renderiza por ejemplo) y verificar que se ejecute automáticamente el pipeline.
+
+2.16 Descargar el resultado del pipeline y correr en un servidor web local el sitio construido.
+
+2.17 Mostrar el antes y el después del cambio.
+

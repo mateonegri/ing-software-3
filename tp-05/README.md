@@ -28,7 +28,6 @@ Ahora creamos el pipeline de release:
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image11.png)
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image12.png)
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image13.png)
-![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image2.png)
 
 2.4\. Optimizar Pipeline de Build
 

@@ -10,6 +10,8 @@
 
 2.2\. Crear un recurso Web App en Azure Portal y navegar a la url provista
 
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image2.png)
+
 2.3\. Actualizar Pipeline de Build para que use tareas de DotNetCoreCLI@2 como en el pipeline clásico, luego crear un Pipeline de Release en Azure DevOps con CD habilitada
 
 2.4\. Optimizar Pipeline de Build

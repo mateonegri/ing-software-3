@@ -8,6 +8,8 @@
 ### 2- Desarrollo:
 2.1\. Crear una cuenta en Azure
 
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image47.png)
+
 2.2\. Crear un recurso Web App en Azure Portal y navegar a la url provista
 
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image2.png)
@@ -130,4 +132,40 @@ Una vez aprobado y que se termino de hacer el release a PROD, vamos a la URL y v
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image46.png)
 
 2.14\. Realizar un pipeline (no release) que incluya el deploy a QA y a PROD con una aprobación manual. El pipeline debe estar construido en YAML sin utilizar el editor clásico de pipelines ni el editor clásico de pipelines de release.
- 
+
+Creamos un nuevo pipeline que se llama Sample02(8)
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image48.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image49.png)
+
+Ahora escribimos el YAML.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image50.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image51.png)
+
+Ahora hacemos cambios en el controlador para que muestre 6 climas, y para ver que funciona el pipeline.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image52.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image53.png)
+
+Vemos que esta corriendo el pipeline.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image54.png)
+
+Vemos que llego a la etapa de aprobacion.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image55.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image56.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image57.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image58.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image59.png)
+
+Navegamos a las paginas y vemos que se hicieron los cambios correctamente.
+
+QA:
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image60.png)
+
+PROD:
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-05/images/image61.png)
+
+

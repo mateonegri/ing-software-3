@@ -565,18 +565,31 @@ A\. Realizar en el código del front las mismas modificaciones hechas a la API.
 En la siguiente imagen, se pueden ver algunas de las modificaciones realizadas, el resto las puede ver en el archivo 
 [addemployee.component.ts](project/EmployeeCrudAngular/src/app/addemployee/addemployee.component.ts).
 
-![]()
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image45.png)
 
 B\. Las validaciones deben ser realizadas en el front sin llegar a la API, y deben ser mostradas en un toast como por ejemplo https://stackblitz.com/edit/angular12-toastr?file=src%2Fapp%2Fapp.component.ts o https://stackblitz.com/edit/angular-error-toast?file=src%2Fapp%2Fcore%2Frxjsops.ts
 
-![]()
+Vemos que se uso toastr.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image40.png)
+
+Si corremos el front, y probamos insertar un nombre invalido vemos lo siguiente:
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image42.png)
+
+Ahora si ingresamos un nombre todo en minuscula, vemos que se formatea una vemos agregado.
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image43.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image44.png)
+
+Las demas validaciones las puede probar si corre el codigo.
 
 C\. Crear las pruebas unitarias necesarias en el front para validar las modificaciones realizadas en el código del front.
 
 La siguiente imagen muestra algunas de las pruebas unitarias realizadas para validar las modificaicones en el codigo del front, el resto lo puede ver en el archivo 
 [addemployee.component.spec.ts](project/EmployeeCrudAngular/src/app/addemployee/addemployee.component.spec.ts).
 
-![]()
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image39.png)
 
 Si corremos los test con el comando 'ng test', vemos lo siguiente:
 

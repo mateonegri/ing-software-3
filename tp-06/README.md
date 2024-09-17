@@ -25,7 +25,7 @@ Corremos la API
 
 ![image](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image5.png)
 
-Navemos a la URL y vemos
+Navegamos a la URL y vemos
 
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image6.png)
 
@@ -544,7 +544,7 @@ Elegi hacer los siguientes cambios en la API.
   - Verificar que el nombre no contenga números, ya que no es común en los nombres de empleados.
   - Validar que el nombre tenga un número mínimo de caracteres, por ejemplo, al menos dos caracteres para evitar entradas inválidas como "A".
 
-En la siguiente imagen, se pueden ver los cambios en la funcion "Create", donde se cumplen las condiciones de arriba. Hay mas cambios en las demas funciones los cuales los puede ver en el archivo 'tp-06/project/EmployeeCrudApi/EmployeeCrudApi/Controllers/EmployeeController.cs'.
+En la siguiente imagen, se pueden ver los cambios en la funcion "Create", donde se cumplen las condiciones de arriba. Hay mas cambios en las demas funciones los cuales los puede ver en el archivo [EmployeeController.cs](tp-06/project/EmployeeCrudApi/EmployeeCrudApi/Controllers/EmployeeController.cs).
 
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image32.png)
 
@@ -562,7 +562,8 @@ Si corremos las pruebas vemos:
 
 A\. Realizar en el código del front las mismas modificaciones hechas a la API. 
 
-En la siguiente imagen, se pueden ver algunas de las modificaciones realizadas, el resto las puede ver en el archivo ''.
+En la siguiente imagen, se pueden ver algunas de las modificaciones realizadas, el resto las puede ver en el archivo 
+[addemployee.component.ts](tp-06/project/EmployeeCrudAngular/src/app/addemployee/addemployee.component.ts).
 
 ![]()
 
@@ -572,7 +573,10 @@ B\. Las validaciones deben ser realizadas en el front sin llegar a la API, y deb
 
 C\. Crear las pruebas unitarias necesarias en el front para validar las modificaciones realizadas en el código del front.
 
-La siguiente imagen muestra algunas de las pruebas unitarias realizadas para validar las modificaicones en el codigo del front, el resto lo puede ver en el archivo ''.
+La siguiente imagen muestra algunas de las pruebas unitarias realizadas para validar las modificaicones en el codigo del front, el resto lo puede ver en el archivo 
+[addemployee.component.spec.ts](tp-06/project/EmployeeCrudAngular/src/app/addemployee/addemployee.component.spec.ts).
+
+![]()
 
 Si corremos los test con el comando 'ng test', vemos lo siguiente:
 

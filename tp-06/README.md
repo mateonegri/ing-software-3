@@ -513,7 +513,7 @@ D\. Verificamos que se creo un archivo test-result.xml en el directorio test-res
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image30.png)
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image31.png)
 
-#### 4.6 Modificamos el código de nuestra API y creamos nuevas pruebas unitarias:
+#### 1.6 Modificamos el código de nuestra API y creamos nuevas pruebas unitarias:
 
 A\. Realizar al menos 5 de las siguientes modificaciones sugeridas al código de la API:
   - Al agregar y al editar un empleado, controlar que el nombre del empleado no esté repetido.
@@ -550,7 +550,7 @@ En la siguiente imagen, se pueden ver los cambios en la funcion "Create", donde 
 
 B\. Crear las pruebas unitarias necesarias para validar las modificaciones realizadas en el código
 
-Cree las pruebas unitarias para validar cada modificacion. En la siguiente imagen, se pueden ver las pruebas unitarias para una validacion y para la correcta creacion de un empleado, el resto de las pruebas las puede ver en el archivo 'tp-06/project/EmployeeCrudApi.Tests/EmployeeControllerUnitTests.cs'.
+Cree las pruebas unitarias para validar cada modificacion. En la siguiente imagen, se pueden ver las pruebas unitarias para una validacion y para la correcta creacion de un empleado, el resto de las pruebas las puede ver en el archivo [EmployeeControllerUnitTests.cs](tp-06/project/EmployeeCrudApi.Tests/EmployeeControllerUnitTests.cs).
 
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image33.png)
 
@@ -558,7 +558,7 @@ Si corremos las pruebas vemos:
 
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image34.png)
 
-#### 4.7 Modificamos el código de nuestro Front y creamos nuevas pruebas unitarias:
+#### 1.7 Modificamos el código de nuestro Front y creamos nuevas pruebas unitarias:
 
 A\. Realizar en el código del front las mismas modificaciones hechas a la API. 
 

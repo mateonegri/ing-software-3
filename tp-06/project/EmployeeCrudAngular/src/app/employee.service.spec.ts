@@ -29,7 +29,7 @@ describe('EmployeeService', () => {
 
 
 
-  /* it('should retrieve all employees', () => {
+  it('should retrieve all employees', () => {
     const today = new Date();
     const expectedDateTime = datePipe.transform(today, 'dd/MM/yyyy HH:mm:ss', undefined) ?? '';  // Consistente con el servicio
 
@@ -53,7 +53,7 @@ describe('EmployeeService', () => {
     expect(req.request.method).toBe('GET');
     req.flush(dummyEmployees);
   });
- */
+
 
 
   it('should be created', () => {

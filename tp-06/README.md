@@ -587,7 +587,7 @@ La siguiente imagen muestra algunas de las pruebas unitarias realizadas para val
 
 Si corremos los test con el comando 'ng test', vemos lo siguiente:
 
-![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image35.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image51.png)
 
 Vemos que se corrieron 11 pruebas y pasaron todas. Si ahora lo corremos con el comando 'ng test --karma-config=karma.conf.js --watch=false --browsers ChromeHeadless' vemos:
 

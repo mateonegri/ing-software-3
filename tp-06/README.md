@@ -572,17 +572,11 @@ B\. Las validaciones deben ser realizadas en el front sin llegar a la API, y deb
 Vemos que se uso toastr.
 
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image40.png)
-
-Si corremos el front, y probamos insertar un nombre invalido vemos lo siguiente:
-
-![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image42.png)
-
-Ahora si ingresamos un nombre todo en minuscula, vemos que se formatea una vez agregado.
-
-![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image43.png)
-![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image44.png)
-
-Las demas validaciones se pueden probar si corre el codigo.
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image46.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image47.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image48.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image49.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-06/images/image50.png)
 
 C\. Crear las pruebas unitarias necesarias en el front para validar las modificaciones realizadas en el código del front.
 

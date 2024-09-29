@@ -399,3 +399,10 @@ El análisis de cobertura de código refleja qué porcentaje del código está s
 
 Buena cobertura en controladores y modelos: Esto es positivo, ya que asegura que las pruebas están enfocadas en la lógica principal de la app.
 Cobertura baja en algunos componentes: Archivos como addemployee.component.ts tienen una cobertura del 43.14%, lo que sugiere que gran parte del código no está siendo validado por las pruebas. 
+
+###   Presentación del trabajo práctico.
+- Subir un doc al repo de GitHub con las capturas de pantalla de los pasos realizados. Debe ser un documento (md, word, o pdf), no videos. Y el documento debe seguir los pasos indicados en el Desarrollo del TP.
+- Acceso al repo de Azure Devops para revisar el trabajo realizado.
+
+###   Criterio de Calificación
+Los pasos 4.1 al 4.3 representan un 60% de la nota total, los pasos 4.4 y subsiguientes representan el 40% restante.

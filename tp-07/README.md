@@ -286,7 +286,7 @@ Ahora seguimos los pasos que siguen para setear el pipeline para analizar el cod
 
 	![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image17.png)
 
-  	- ##### 4.3.7 Hacemos prueba de editar un empleado
+  	- ##### 1.3.7 Hacemos prueba de editar un empleado
     	 - Creamos en cypress/e2e/ un archivo editEmployee_test.cy.js con el siguiente contenido, guardamos y aparecerá en Cypress:
   	       
 		```js
@@ -297,7 +297,6 @@ Ahora seguimos los pasos que siguen para setear el pipeline para analizar el cod
 			})
   	  	```
   	![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image14.png)
-	![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image17.png)
 
 	- Hacemos "Add command to the test" y empezamos a interactuar con la página
 

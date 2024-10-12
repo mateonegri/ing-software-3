@@ -261,11 +261,17 @@
 		                --cpu $(container-cpu-api-qa) \
 		                --memory $(container-memory-api-qa)
   	  ```
+  	  ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-08/images/image57.png)
+  	  
   	  - ##### 1.1.10 - Ejecutar el pipeline y en Azure Portal acceder al recurso de Azure Container Instances creado. Copiar la url del contenedor y navegarlo desde browser. Verificar que traiga datos.
 
   	  Ejecutamos el pipeline y vemos que se creo la instancia del backend.
   	  ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-08/images/image31.png)
   	  ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-08/images/image30.png)
+
+  	  Si vamos a la URL del container instance vemos que funciona.
+
+		![](https://github.com/mateonegri/ing-software-3/blob/main/tp-08/images/image56.png)
   	  
   	  - ##### 1.1.11 - Agregar tareas para generar un recurso Azure Container Instances que levante un contenedor con nuestra imagen de front (DESAFIO)
   	  	- A la etapa creada en 4.1.9 Agregar tareas para generar contenedor en ACI con nuestra imagen de Front

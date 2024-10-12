@@ -72,7 +72,7 @@
         failIfCoverageEmpty: false
       displayName: 'Publicar resultados de code coverage del back-end'
 	```
- 	![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image40.png)
+ 	![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image58.png)
   
  	- ##### 1.1.5 Agregar a nuestro pipeline ANTES del Build de front la tarea de test y la de publicación de los resultados.
   
@@ -138,6 +138,7 @@ Ahora seguimos los pasos que siguen para setear el pipeline para analizar el cod
 	        
 		 ```
 
+	  ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image57.png)
   	  - Despues de nuestra tarea de Build del Back:
 		   ```yaml
 		     - task: SonarCloudAnalyze@2
@@ -253,6 +254,8 @@ Ahora seguimos los pasos que siguen para setear el pipeline para analizar el cod
 
 	Cypress captura automáticamente pantallas cuando una prueba falla. Las capturas de pantalla se guardan en la carpeta `cypress/screenshots`.
 
+	![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/Mi%20primera%20prueba%20--%20Carga%20correctamente%20la%20p%C3%A1gina%20de%20ejemplo%20(failed).png)
+
  	- ##### 1.3.6 Grabar nuestras pruebas para que Cypress genere código automático y genere reportes:
     	 - Cerramos Cypress
 	 - Editamos el archivo cypress.config.ts incluyendo la propiedad **experimentalStudio** en true y la configuración de reportería.
@@ -317,35 +320,89 @@ Ahora seguimos los pasos que siguen para setear el pipeline para analizar el cod
 
 Para esto, modificamos el pipeline de la siguiente manera. En el build del front agregamos lo siguiente.
 
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image56.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image55.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image0.png)
+
 Vemos los resultados del analisis. 
+
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image1.png)
 
 - Implementar en Cypress pruebas de integración que incluya los casos desarrollados como pruebas unitarias del front en el TP06.
 
 Para implementar cypress, primero generamos el codigo para cada caso de prueba y configuramos correctamente el cypress config file.
 
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image54.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image53.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image52.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image51.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image50.png)
+
 - Incorporar al pipeline de Deploy la ejecución de las pruebas de integración y la visualización de sus resultados.
 
-
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image10.png)
 
 - **Resultado**:
     - Un Pipeline en YAML que incluya a) Build de QA y Front con ejecución y resultado de pruebas de code coverage, pruebas unitarias y análisis de Sonar Cloud y b) Deploy a WebApp(s) de QA y Front que incluya ejecución y resultado de pruebas de integración
 
-    <img width="1318" alt="image" src="https://github.com/user-attachments/assets/76324d85-3706-495d-ad56-6054371a3019">
-
     - Dos Stages: Una para Build, Test Unitarios, Code Coverage y SonarCloud y otra para el Deploy a QA con Tests de Integración
 
-	<img width="296" alt="image" src="https://github.com/user-attachments/assets/03a69736-a1c1-4ce2-a648-4237da015150">
+	![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image49.png)
 
     - En la pestaña Test, poder visualizar los Test Unitarios de Front y Back y los Test de Integracion:
 
-	<img width="1262" alt="image" src="https://github.com/user-attachments/assets/83fe8613-631d-4c4d-9042-37455701c0e3">
+	![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image5.png)
 
     - En la pestaña Code Coverage, visualizar la cobertura de las pruebas unitarias de Back y de Front:
 
-	<img width="1199" alt="image" src="https://github.com/user-attachments/assets/e3d48d54-945c-4b99-afbe-6a72b5f95c3f">
+	![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image3.png)
 
     - En la pestaña Extensions, ver el análisis de SonarCloud en verde
 
-       <img width="720" alt="image" src="https://github.com/user-attachments/assets/c5511fb6-3d39-4b9c-ad9a-e688bdaa3016">
+       ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-07/images/image4.png)
     
     - Un documento de una carilla explicando qué información pudieron sacar del análisis de Sonar Cloud y de las pruebas de cobertura.
+ 
+#### 1. SonarCloud (Análisis de calidad del código)
+
+  #### Observaciones generales:
+  
+SonarCloud identifica problemas relacionados con la calidad del código que pueden afectar tanto la mantenibilidad como la fiabilidad de la aplicación. Hay un total de 73 issues detectados, lo cual representa una cantidad moderada de advertencias, pero su impacto varía según la severidad.
+
+#### Tipos de problemas destacados:
+ 
+ - Code Smell (Olores de código): Estos no son necesariamente errores, pero son patrones de código que pueden evolucionar en problemas a largo plazo. Son advertencias sobre cómo algo está escrito, sugiriendo mejoras de estilo o estructura que harán el código más legible y fácil de mantener. Ejemplo: El archivo addemployee.component.css tiene una fuente vacía inesperada, que podría ser un fragmento de código incompleto o innecesario que se debería revisar. Esto se marca como un code smell mayor, indicando que puede causar problemas significativos si no se aborda.
+  
+- Accesibilidad (Reliability): Existen varios problemas relacionados con la accesibilidad, como etiquetas de formulario no asociadas correctamente con controles o imágenes sin atributos "alt". Estos problemas afectan la capacidad de las herramientas de accesibilidad, como lectores de pantalla, para interpretar correctamente la interfaz. Ejemplo: En addemployee.component.html, la advertencia sugiere que un formulario no tiene una etiqueta asociada, lo que puede reducir la accesibilidad del sitio web para personas con discapacidades visuales.
+
+El analisis de Sonar Cloud reveló tambien otros tipos de problemas, en su mayoria, asociados a la mantenibilidad del codigo, ya sea relacionados a la consistencia o a la intencionalidad. Estos issues, no son problemas criticos de la aplicacion, sino que sugerencias a mejorar para aumentar de la calidad del codigo y su adaptacion a futuro. 
+  
+#### Impacto de los problemas detectados:
+
+- Severidad Alta: 13 issues. Estos pueden tener un impacto serio en la fiabilidad o seguridad de la aplicación y deberían ser atendidos de manera prioritaria.
+- Severidad Media: 35 issues. Aunque no son urgentes, deberían resolverse para evitar complicaciones futuras.
+- Severidad Baja: 25 issues. Son mejoras sugeridas que podrían beneficiar al proyecto a largo plazo, pero no tienen un impacto inmediato o crítico.
+  
+### 2. Azure Pipelines (Cobertura de pruebas)
+
+  #### Observaciones generales:
+
+El análisis de cobertura de código refleja qué porcentaje del código está siendo ejecutado durante las pruebas. Un 57.14% de cobertura indica que más de la mitad del código está cubierto, lo que es un nivel aceptable, pero hay margen para mejorar.
+
+#### Análisis por archivo:
+
+- Cobertura alta (93.94%) en EmployeeController.cs es un buen indicador de que las funcionalidades más críticas están siendo bien probadas. Esto asegura que la mayoría de las rutas y lógicas en este controlador están siendo validadas por pruebas.
+- Cobertura del 0% en Program.cs: Esto indica que la configuración inicial o la lógica de arranque no está siendo probada. 
+- Cobertura baja (46.15%) en employee.service.ts: Al ser un servicio principal y fundamental de la API, seria una buena práctica incrementar el nivel de cobertura de este servicio.
+
+#### Impacto de la cobertura:
+
+Buena cobertura en controladores y modelos: Esto es positivo, ya que asegura que las pruebas están enfocadas en la lógica principal de la app.
+Cobertura baja en algunos componentes: Archivos como addemployee.component.ts tienen una cobertura del 43.14%, lo que sugiere que gran parte del código no está siendo validado por las pruebas. 
+
+###   Presentación del trabajo práctico.
+- Subir un doc al repo de GitHub con las capturas de pantalla de los pasos realizados. Debe ser un documento (md, word, o pdf), no videos. Y el documento debe seguir los pasos indicados en el Desarrollo del TP.
+- Acceso al repo de Azure Devops para revisar el trabajo realizado.
+
+###   Criterio de Calificación
+Los pasos 4.1 al 4.3 representan un 60% de la nota total, los pasos 4.4 y subsiguientes representan el 40% restante.

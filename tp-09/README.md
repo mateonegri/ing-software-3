@@ -168,17 +168,17 @@ Vemos que pide aprobacion cuando llega a PROD.
 
 Ahora corroboramos que funcionen los deploy de PROD. 
 
-WebApps:
+Web Apps:
 
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image7.png)
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image2.png)
 
-Container Instances:
+ACI:
 
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image4.png)
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image5.png)
 
-App Service con soporte de Contenedores:
+Web Apps con Soporte para contenedores:
 
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image0.png)
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image6.png)

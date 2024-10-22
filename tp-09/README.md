@@ -171,7 +171,7 @@ Backend tests:
 Frontend tests:
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image43.png)
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image42.png)
-![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image42.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image41.png)
 
 Vemos que pide aprobacion cuando llega a PROD.
 

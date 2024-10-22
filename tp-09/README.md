@@ -161,6 +161,18 @@ Corremos el pipeline. Los deploy a QA funcionan y vemos que se ejecutaron todos 
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image40.png)
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image10.png)
 
+Hacemos cambios en los test para ver que si falla algun test unitario vemos que se detiene la ejecucion y se puede ver que test fallo.
+
+Backend tests:
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image46.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image45.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image44.png)
+
+Frontend tests:
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image43.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image42.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image42.png)
+
 Vemos que pide aprobacion cuando llega a PROD.
 
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image9.png)

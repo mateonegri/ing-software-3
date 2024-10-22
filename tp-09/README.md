@@ -153,10 +153,12 @@ Para este desafio, cree los siguientes templates.
 Y los agregue al pipeline. Los templates para deployar a WebApps son las tareas usadas en el tp-07, y los templates de deploy a 
 container instances son las tareas usadas en el tp-08.
 
-![]()
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image38.png)
 
-Corremos el pipeline. Los deploy a QA funcionan.
+Corremos el pipeline. Los deploy a QA funcionan y vemos que se ejecutaron todos los test y code coverage.
 
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image39.png)
+![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image40.png)
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image10.png)
 
 Vemos que pide aprobacion cuando llega a PROD.
@@ -166,17 +168,17 @@ Vemos que pide aprobacion cuando llega a PROD.
 
 Ahora corroboramos que funcionen los deploy de PROD. 
 
-WebApps:
+Web Apps:
 
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image7.png)
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image2.png)
 
-Container Instances:
+ACI:
 
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image4.png)
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image5.png)
 
-App Service con soporte de Contenedores:
+Web Apps con Soporte para contenedores:
 
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image0.png)
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image6.png)
@@ -185,7 +187,7 @@ Una vez deployados, termina el pipeline.
 
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image1.png)
 
-Y vemos que se crean todos los recursos en Azure.
+Y vemos que se crearon todos los recursos en Azure.
 
 ![](https://github.com/mateonegri/ing-software-3/blob/main/tp-09/images/image3.png)
 
